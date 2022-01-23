@@ -7,6 +7,11 @@ class Articles {
     this.articles,
   });
 
-  factory Articles.fromJson(Map<String, dynamic> data) =>
-      Articles(articles: data['articles']);
+  factory Articles.fromJson(Map<String, dynamic> data) => Articles(
+        articles: List.from(
+          data['articles'].map(
+            (x) => Article.fromJson(x),
+          ),
+        ),
+      );
 }

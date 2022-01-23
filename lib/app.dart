@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:news_app_mvvm_patterns/view/home_view.dart';
+import 'services/news_service.dart';
 
 class NewsApp extends StatelessWidget {
-  const NewsApp({ Key? key }) : super(key: key);
+  const NewsApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'News App',
-      home: Container(),
-      
+    return ProviderScope(
+      child: MaterialApp(
+        title: 'News App',
+        home: HomeView(),
+      ),
     );
   }
 }
