@@ -1,6 +1,6 @@
 # news_app_mvvm_patterns
 
-A new Flutter project.
+A simple Flutter project with MVVM Patterns using riverpod as state management.
 
 ## Getting Started
 
